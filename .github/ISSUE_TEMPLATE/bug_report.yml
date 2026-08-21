@@ -1,0 +1,35 @@
+name: Bug report
+description: Report reproducible behavior that differs from the intended SPORTS experience.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Thank you for helping improve SPORTS. Do not include API keys, tokens, or personal data."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Explain the behavior you observed and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to …
+        2. Select …
+        3. Observe …
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, operating system, and relevant provider setting.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting material
+      description: Add safe screenshots, logs, or recordings. Remove sensitive information first.
