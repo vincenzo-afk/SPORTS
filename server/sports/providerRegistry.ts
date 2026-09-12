@@ -1,5 +1,6 @@
 import type { SportsProvider } from "@shared/sports";
 import { DemoSportsProvider } from "./demoProvider";
+import { LiveTennisSportsProvider } from "./liveTennisProvider";
 
 /**
  * One registry is the only place a production sports API adapter is connected.
@@ -9,6 +10,8 @@ export function createSportsProvider(providerName = process.env.SPORTS_PROVIDER 
   switch (providerName) {
     case "demo":
       return new DemoSportsProvider();
+    case "livetennis":
+      return new LiveTennisSportsProvider();
     default:
       throw new Error(`Unsupported sports provider: ${providerName}. Register its adapter in server/sports/providerRegistry.ts.`);
   }
